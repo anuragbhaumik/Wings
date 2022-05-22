@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.yasp.settings.fragments;
+package com.altho.settings.fragments;
 
 import com.android.internal.logging.nano.MetricsProto;
 
@@ -28,11 +28,11 @@ public class QuickSettings extends SettingsPreferenceFragment {
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
 
-        addPreferencesFromResource(R.xml.yaap_settings_quicksettings);
+        addPreferencesFromResource(R.xml.altho_settings_quicksettings);
     }
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.YASP;
+        return MetricsProto.MetricsEvent.ALTHO;
     }
 }

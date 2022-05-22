@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.yasp.settings.fragments;
+package com.altho.settings.fragments;
 
 import com.android.internal.logging.nano.MetricsProto;
 
@@ -22,17 +22,17 @@ import com.android.settings.R;
 
 import com.android.settings.SettingsPreferenceFragment;
 
-public class StatusBarSettings extends SettingsPreferenceFragment {
+public class MiscSettings extends SettingsPreferenceFragment {
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
 
-        addPreferencesFromResource(R.xml.yaap_settings_statusbar);
+        addPreferencesFromResource(R.xml.altho_settings_misc);
     }
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.YASP;
+        return MetricsProto.MetricsEvent.ALTHO;
     }
 }

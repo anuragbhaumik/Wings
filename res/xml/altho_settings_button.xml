@@ -21,7 +21,7 @@
 
     <PreferenceScreen
         android:key="volume_key"
-        android:fragment="com.yasp.settings.fragments.VolumeSettings"
+        android:fragment="com.altho.settings.fragments.VolumeSettings"
         android:title="@string/volume_title" />
 
 </PreferenceScreen>
