@@ -14,28 +14,28 @@
  * limitations under the License.
  */
 
-package com.yasp.settings.preferences;
+package com.altrusit.settings.preferences;
 
 import android.content.Context;
 import android.util.AttributeSet;
 
 import androidx.preference.SwitchPreference;
 
-public class SystemSettingSwitchPreference extends SwitchPreference {
+public class SecureSettingSwitchPreference extends SwitchPreference {
 
-    public SystemSettingSwitchPreference(Context context, AttributeSet attrs, int defStyle) {
+    public SecureSettingSwitchPreference(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
-        setPreferenceDataStore(new SystemSettingsStore(context.getContentResolver()));
+        setPreferenceDataStore(new SecureSettingsStore(context.getContentResolver()));
     }
 
-    public SystemSettingSwitchPreference(Context context, AttributeSet attrs) {
+    public SecureSettingSwitchPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
-        setPreferenceDataStore(new SystemSettingsStore(context.getContentResolver()));
+        setPreferenceDataStore(new SecureSettingsStore(context.getContentResolver()));
     }
 
-    public SystemSettingSwitchPreference(Context context) {
+    public SecureSettingSwitchPreference(Context context) {
         super(context);
-        setPreferenceDataStore(new SystemSettingsStore(context.getContentResolver()));
+        setPreferenceDataStore(new SecureSettingsStore(context.getContentResolver()));
     }
 
     @Override

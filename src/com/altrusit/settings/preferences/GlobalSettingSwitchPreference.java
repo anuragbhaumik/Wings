@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.yasp.settings.preferences;
+package com.altrusit.settings.preferences;
 
 import android.content.Context;
 import android.util.AttributeSet;
