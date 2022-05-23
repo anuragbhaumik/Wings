@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 AICP
+ * Copyright (C) 2017-2018 AICP
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,28 +14,36 @@
  * limitations under the License.
  */
 
-package com.altrusit.settings.preferences;
+package com.altho.settings.preferences;
 
 import android.content.Context;
+import android.text.TextUtils;
 import android.util.AttributeSet;
 
-import com.altrusit.settings.preferences.SecureSettingsStore;
+public class SecureSettingListPreference extends ListPreference {
 
-public class SecureSettingMasterSwitchPreference extends MasterSwitchPreference {
-
-    public SecureSettingMasterSwitchPreference(Context context, AttributeSet attrs, int defStyle) {
+    public SecureSettingListPreference(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         setPreferenceDataStore(new SecureSettingsStore(context.getContentResolver()));
     }
 
-    public SecureSettingMasterSwitchPreference(Context context, AttributeSet attrs) {
+    public SecureSettingListPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
         setPreferenceDataStore(new SecureSettingsStore(context.getContentResolver()));
     }
 
-    public SecureSettingMasterSwitchPreference(Context context) {
+    public SecureSettingListPreference(Context context) {
         super(context);
         setPreferenceDataStore(new SecureSettingsStore(context.getContentResolver()));
+    }
+
+    @Override
+    protected void onSetInitialValue(boolean restoreValue, Object defaultValue) {
+        // This is what default ListPreference implementation is doing without respecting
+        // real default value:
+        //setValue(restoreValue ? getPersistedString(mValue) : (String) defaultValue);
+        // Instead, we better do
+        setValue(restoreValue ? getPersistedString((String) defaultValue) : (String) defaultValue);
     }
 
 }

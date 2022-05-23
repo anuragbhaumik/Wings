@@ -14,28 +14,33 @@
  * limitations under the License.
  */
 
-package com.altrusit.settings.preferences;
+package com.altho.settings.preferences;
 
 import android.content.Context;
 import android.util.AttributeSet;
 
-import com.altrusit.settings.preferences.GlobalSettingsStore;
+public class SystemSettingIntListPreference extends SystemSettingListPreference {
 
-public class GlobalSettingMasterSwitchPreference extends MasterSwitchPreference {
-
-    public GlobalSettingMasterSwitchPreference(Context context, AttributeSet attrs, int defStyle) {
+    public SystemSettingIntListPreference(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
-        setPreferenceDataStore(new GlobalSettingsStore(context.getContentResolver()));
     }
 
-    public GlobalSettingMasterSwitchPreference(Context context, AttributeSet attrs) {
+    public SystemSettingIntListPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
-        setPreferenceDataStore(new GlobalSettingsStore(context.getContentResolver()));
     }
 
-    public GlobalSettingMasterSwitchPreference(Context context) {
+    public SystemSettingIntListPreference(Context context) {
         super(context);
-        setPreferenceDataStore(new GlobalSettingsStore(context.getContentResolver()));
+    }
+
+    @Override
+    protected boolean persistString(String value) {
+        return persistInt(Integer.parseInt(value));
+    }
+
+    @Override
+    protected String getPersistedString(String defaultReturnValue) {
+        return String.valueOf(getPersistedInt(Integer.parseInt(defaultReturnValue)));
     }
 
 }

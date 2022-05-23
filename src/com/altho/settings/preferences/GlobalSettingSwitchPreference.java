@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2016-2019 crDroid Android Project
+ * Copyright (C) 2017 AICP
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,25 +13,39 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.altrusit.settings.preferences;
+
+package com.altho.settings.preferences;
 
 import android.content.Context;
 import android.util.AttributeSet;
 
-public class GlobalSettingSeekBarPreference extends CustomSeekBarPreference {
+import androidx.preference.SwitchPreference;
 
-    public GlobalSettingSeekBarPreference(Context context, AttributeSet attrs, int defStyle) {
+public class GlobalSettingSwitchPreference extends SwitchPreference {
+
+    public GlobalSettingSwitchPreference(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         setPreferenceDataStore(new GlobalSettingsStore(context.getContentResolver()));
     }
 
-    public GlobalSettingSeekBarPreference(Context context, AttributeSet attrs) {
+    public GlobalSettingSwitchPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
         setPreferenceDataStore(new GlobalSettingsStore(context.getContentResolver()));
     }
 
-    public GlobalSettingSeekBarPreference(Context context) {
-        super(context, null);
+    public GlobalSettingSwitchPreference(Context context) {
+        super(context);
         setPreferenceDataStore(new GlobalSettingsStore(context.getContentResolver()));
+    }
+
+    @Override
+    protected void onSetInitialValue(boolean restoreValue, Object defaultValue) {
+        // This is what default TwoStatePreference implementation is doing without respecting
+        // real default value:
+        //setChecked(restoreValue ? getPersistedBoolean(mChecked)
+        //        : (Boolean) defaultValue);
+        // Instead, we better do
+        setChecked(restoreValue ? getPersistedBoolean((Boolean) defaultValue)
+                : (Boolean) defaultValue);
     }
 }

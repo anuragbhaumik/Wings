@@ -1,4 +1,4 @@
-package com.altrusit.settings.preferences;
+package com.altho.settings.preferences;
 
 import android.content.Context;
 import android.content.res.TypedArray;
