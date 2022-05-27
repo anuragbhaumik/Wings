@@ -18,4 +18,31 @@
     android:title="@string/notifications_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+	<PreferenceCategory
+        android:title="@string/notification_material_dismiss_title">
+
+        <com.altho.settings.preferences.SystemSettingSwitchPreference
+            android:key="notification_material_dismiss"
+            android:title="@string/notification_material_dismiss_title"
+            android:summary="@string/notification_material_dismiss_summary"
+            android:defaultValue="false" />
+
+        <com.altho.settings.preferences.SystemSettingSeekBarPreference
+            android:key="notification_material_dismiss_style"
+            android:title="@string/notification_material_dismiss_style_title"
+            android:dependency="notification_material_dismiss"
+            android:defaultValue="0"
+            android:max="9"
+            android:min="0" />
+
+        <com.altho.settings.preferences.SystemSettingSeekBarPreference
+            android:key="notification_material_dismiss_bgstyle"
+            android:title="@string/notification_material_dismiss_bgstyle_title"
+            android:dependency="notification_material_dismiss"
+            android:defaultValue="0"
+            android:max="4"
+            android:min="0" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>
