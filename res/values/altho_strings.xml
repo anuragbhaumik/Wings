@@ -76,4 +76,8 @@
     <string name="volte_icon_volte">VoLTE Icon</string>
     <string name="volte_icon_oos">VoLTE OOS Icon</string>
     <string name="volte_icon_hd">HD Icon</string>
+
+    <!-- QS Transparency -->
+    <string name="qs_transparency_title">QS Transparency</string>
+    <string name="qs_transparency_summary">Choose how transparent you want your QS Panel to be (Requires SystemUI)</string>
 </resources>
