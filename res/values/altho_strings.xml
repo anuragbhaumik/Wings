@@ -57,4 +57,8 @@
     <string name="notification_material_dismiss_summary">Replace clear all notification text with material style floating button</string>
     <string name="notification_material_dismiss_style_title">Button style</string>
     <string name="notification_material_dismiss_bgstyle_title">Button background</string>
+
+    <!-- Show LTE/4G switch -->
+    <string name="show_fourg_icon_title">Show 4G instead of LTE</string>
+    <string name="show_fourg_icon_summary">Replace LTE indicator with 4G</string>
 </resources>
