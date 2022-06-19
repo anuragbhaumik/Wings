@@ -102,4 +102,8 @@
     <string name="extra_category">Extra</string>
     <string name="wake_when_plugged_or_unplugged_title">Wake on plug</string>
     <string name="wake_when_plugged_or_unplugged_summary">Turn the screen on when connecting or disconnecting a power source</string>
+
+    <!-- Disable QS -->
+    <string name="disable_qs_title">Hide QS in secure lock screen</string>
+    <string name="disable_qs_summary">Hides QS if device is locked. Does not disable notification shade</string>
 </resources>
