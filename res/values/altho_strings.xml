@@ -106,4 +106,9 @@
     <!-- Disable QS -->
     <string name="disable_qs_title">Hide QS in secure lock screen</string>
     <string name="disable_qs_summary">Hides QS if device is locked. Does not disable notification shade</string>
+
+    <!-- Strict standby -->
+    <string name="strict_standby_policy_title">Strict standby policy</string>
+    <string name="strict_standby_policy_summary">When dismissing from recents, this will force stop apps with restricted battery usage and impose stronger restrictions to them. Also, all app standby restrictions will be imposed even when device is charging.</string>
+
 </resources>

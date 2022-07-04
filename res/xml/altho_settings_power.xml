@@ -23,4 +23,11 @@
            android:title="@string/wake_when_plugged_or_unplugged_title"
            android:summary="@string/wake_when_plugged_or_unplugged_summary"
            android:defaultValue="true" />
+    
+   <ink.altho.settings.preferences.GlobalSettingSwitchPreference
+        android:key="strict_standby_policy"
+        android:title="@string/strict_standby_policy_title"
+        android:summary="@string/strict_standby_policy_summary"
+        android:defaultValue="false"/>
+
 </PreferenceScreen>
