@@ -115,4 +115,9 @@
     <string name="force_background_freezer_title">Background tasks freezer</string>
     <string name="force_background_freezer_summary">Freeze tasks with restricted battery usage when moving them to background and unfreeze them when moving to foreground. This could save battery slightly but may lead to crashes and background ANR.</string>
 
+    <!-- Network Traffic -->
+    <string name="traffic_title">Traffic indicators</string>
+    <string name="traffic_summary">Customize the traffic indicators</string>
+    <string name="network_traffic_state_title">Show network traffic</string>
+    <string name="network_traffic_autohide_threshold_title">Auto-hide threshold</string>
 </resources>
