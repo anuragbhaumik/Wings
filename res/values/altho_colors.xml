@@ -33,5 +33,9 @@
     <color name="userpanel_default6">#ff37474f</color>
 
     <color name="disabled_text_color">#66000000</color>
+	
+	<!-- Cards -->
+    <color name="altho_card_accent">@android:color//system_accent1_100</color>
+    <color name="altho_card_grey">#E0E0E0</color>
 
 </resources>
