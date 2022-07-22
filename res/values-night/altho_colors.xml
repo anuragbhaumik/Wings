@@ -14,6 +14,6 @@
 <resources>
 
     <!-- Cards -->
-    <color name="altho_card_accent">@android:color/system_accent1_700</color>
+    <color name="altho_hub_card_accent">@*android:color/material_grey_100</color>
     <color name="altho_card_grey">#424242</color>
 </resources>
