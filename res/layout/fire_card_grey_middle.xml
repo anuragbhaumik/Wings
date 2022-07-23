@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-    Copyright (C) 2022 The althoOS Project
+    Copyright (C) 2022 The fireOS Project
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
     You may obtain a copy of the License at
@@ -16,13 +16,13 @@
     android:layout_height="wrap_content"
     android:layout_marginLeft="24dp"
     android:layout_marginRight="24dp"
-    android:background="@drawable/altho_rc_accent_ripple_bottom">
+    android:background="@drawable/fire_rc_grey_ripple_middle">
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="16dp"
-        android:paddingBottom="16dp">
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -34,7 +34,8 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="12dp"
                 android:paddingRight="12dp"
-                android:id="@android:id/icon"/>
+                android:id="@android:id/icon"
+                android:tint="?android:attr/textColorPrimary"/>
 
         </LinearLayout>
 
@@ -65,5 +66,12 @@
         </LinearLayout>
 
     </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.75dp"
+        android:layout_gravity="bottom"
+        android:foregroundGravity="bottom"
+        android:background="?android:attr/colorPrimary"/>
 
 </FrameLayout>

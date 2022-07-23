@@ -12,8 +12,8 @@
 -->
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="rectangle">
-    <solid android:color="@color/altho_hub_card_accent" />
+    <solid android:color="@color/fire_card_accent" />
     <corners
-        android:bottomLeftRadius="@dimen/altho_rc_radius"
-        android:bottomRightRadius="@dimen/altho_rc_radius" />
+        android:bottomLeftRadius="@dimen/fire_rc_radius"
+        android:bottomRightRadius="@dimen/fire_rc_radius" />
 </shape>

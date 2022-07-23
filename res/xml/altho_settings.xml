@@ -17,18 +17,24 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/altho_settings_title" >
 
+    <!-- Altho logo -->
+    <Preference
+        android:key="fire_logo"
+        android:layout="@layout/fire_logo"
+        android:selectable="false"/>
+
         <!-- Status Bar -->
         <Preference
             android:key="statusbar_category"
             android:title="@string/statusbar_title"
-			settings:layout="@layout/altho_card_accent_top"
+	    settings:layout="@layout/fire_card_accent_top"
             android:fragment="com.altho.settings.fragments.StatusBarSettings"
             android:icon="@drawable/ic_settings_statusbar"/>
 
         <!-- Quick Settings -->
         <Preference
             android:key="quicksettings_category"
-			settings:layout="@layout/altho_card_accent_middle"
+	    settings:layout="@layout/fire_card_accent_middle"
             android:title="@string/quicksettings_title"
             android:fragment="com.altho.settings.fragments.QuickSettings"
             android:icon="@drawable/ic_settings_quicksettings"/>
@@ -36,7 +42,7 @@
         <!-- Navigation Bar -->
         <Preference
             android:key="navigationbar_category"
-			settings:layout="@layout/altho_card_accent_bottom"
+			settings:layout="@layout/fire_card_accent_bottom"
             android:title="@string/navbar_title"
             android:fragment="com.altho.settings.fragments.NavigationBarSettings"
             android:icon="@drawable/ic_settings_navbar"/>
@@ -45,13 +51,13 @@
 		<Preference
 		    android:key="altho_homepage_category"
 			android:selectable="false"
-			settings:layout="@layout/altho_homepage_category"/>
+			settings:layout="@layout/fire_homepage_category"/>
 			
         <!-- Gestures -->
         <Preference
             android:key="gestures_category"
             android:title="@string/gestures_title"
-			settings:layout="@layout/altho_card_accent_top"
+			settings:layout="@layout/fire_card_accent_top"
             android:fragment="com.altho.settings.fragments.GestureSettings"
             android:icon="@drawable/ic_settings_pdgestures"/>
 
@@ -59,7 +65,7 @@
         <Preference
             android:key="lockscreen_category"
             android:title="@string/lockscreen_title"
-			settings:layout="@layout/altho_card_accent_middle"
+			settings:layout="@layout/fire_card_accent_middle"
             android:fragment="com.altho.settings.fragments.LockScreenSettings"
             android:icon="@drawable/ic_settings_lockscreens"/>
 
@@ -67,7 +73,7 @@
         <Preference
             android:key="misc_category"
             android:title="@string/misc_title"
-			settings:layout="@layout/altho_card_accent_bottom"
+			settings:layout="@layout/fire_card_accent_bottom"
             android:fragment="com.altho.settings.fragments.MiscSettings"
             android:icon="@drawable/ic_settings_miscs"/>
 

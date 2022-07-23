@@ -35,7 +35,7 @@
     <color name="disabled_text_color">#66000000</color>
 	
 	<!-- Cards -->
-    <color name="altho_hub_card_accent">@*android:color/material_grey_100</color>
-    <color name="altho_card_grey">#E0E0E0</color>
+    <color name="fire_hub_card_accent">#00000000</color>
+    <color name="fire_card_grey">@android:color/system_neutral1_800</color>
 
 </resources>
