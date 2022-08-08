@@ -29,5 +29,16 @@
             android:summary="@string/less_boring_heads_up_summary"
             android:defaultValue="false" /> 
     </PreferenceCategory>
+    
+    <PreferenceCategory
+        android:key="qs_category"
+        android:title="@string/qs_category">
+        
+        <com.android.settings.custom.preference.SystemSettingSwitchPreference
+            android:key="qs_show_battery_estimate"
+            android:title="@string/qs_show_battery_estimate_title"
+            android:summary="@string/qs_show_battery_estimate_summary"
+            android:defaultValue="true"/>
+    </PreferenceCategory>        
         
 </PreferenceScreen>
